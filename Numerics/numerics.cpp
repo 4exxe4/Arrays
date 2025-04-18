@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 using namespace std;
 
-#define BINARY
+//#define BINARY
 //#define HEX
 
 void main()
