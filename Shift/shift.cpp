@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <Windows.h>
 using namespace std;
 
@@ -10,7 +10,7 @@ void main()
 	const int n = 10;
 	int arr[n] = { 0,1,2,3,4,5,6,7,8,9 };
 
-	// Вывод исходного массива:
+	// Р’С‹РІРѕРґ РёСЃС…РѕРґРЅРѕРіРѕ РјР°СЃСЃРёРІР°:
 
 	for (int i = 0; i < n; i++)
 	{
@@ -18,9 +18,9 @@ void main()
 	}
 	cout << endl;
 
-	// Циклический сдвиг массива:
+	// Р¦РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РјР°СЃСЃРёРІР°:
 	int number_of_shifts;
-	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> number_of_shifts;
 	
 	for (int i = 0; i < number_of_shifts; i++)
 	{
@@ -33,7 +33,7 @@ void main()
 		Sleep(500);
 		system("CLS");
 
-		// Вывод сдвинутого массива
+		// Р’С‹РІРѕРґ СЃРґРІРёРЅСѓС‚РѕРіРѕ РјР°СЃСЃРёРІР°
 		for (int i = 0; i < n; i++)
 		{
 			cout << arr[i] << tab;
