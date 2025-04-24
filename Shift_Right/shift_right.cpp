@@ -17,18 +17,19 @@ void main()
 	}
 	cout << endl;
 
-	// Циклический сдвиг массива влево:
+	// Циклический сдвиг массива вправо:
 	int number_of_shifts;
 	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
 
 	for (int i = 0; i < number_of_shifts; i++)
 	{
-		int buffer = arr[0];
-		for (int i = 1; i < n; i++)
+		int buffer_right = arr[n - 1]; // Сохраняем последний элемент
+
+		for (int j = n - 1; j > 0; j--)
 		{
-			arr[i - 1] = arr[i];
+			arr[j] = arr[j - 1]; // Сдвигаем элементы вправо
 		}
-		arr[n - 1] = buffer;
+		arr[0] = buffer_right; // Перемещаем сохраненный элемент на первое место
 
 		// Вывод сдвинутого массива
 		for (int i = 0; i < n; i++)
