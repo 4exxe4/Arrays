@@ -27,11 +27,9 @@ void main()
 		int buffer = arr[0];
 		for (int i = 1; i < n; i++)
 		{
-			arr[i + 1] = arr[i];
+			arr[i - 1] = arr[i];
 		}
 		arr[n - 1] = buffer;
-		Sleep(500);
-		system("CLS");
 
 		// Вывод сдвинутого массива
 		for (int i = 0; i < n; i++)
