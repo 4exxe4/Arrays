@@ -9,13 +9,25 @@ void main()
 
 	const int ROWS = 3;
 	const int COLS = 3;
-	int arr[ROWS][COLS] =
+	int arr[ROWS][COLS] /*=
 	{
 		{ 1,2,3},
 		{ 4,5,6},
 		{ 7,8,9},
 	};
+	*/;
 
+
+	//Заполнение случайными числами
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() % 100;
+		}
+	}
+
+	//Вывод исходного массива на экран
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
@@ -24,7 +36,52 @@ void main()
 		}
 		cout << endl;
 	}
+	cout << endl;
+
+	//Сортировка массива:
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j+1 : 0; l < COLS; l++)
+					
+				{
+					//arr[i][j] - выбранный элемент
+					//arr[k][l] - перебираемый элемент
+					if (arr[k][l] < arr[i][j])
+					{
+						int buffer = arr[i][j];
+						arr[i][j] = arr[k][l];
+						arr[k][l] = buffer;
+					}
+				}
+			}
+		}
+	}
+	/*
+	if (k = i)
+	{
+		l = j + 1
+	}
+	else
+	{
+		l = 0
+	}
+	*/
+	//Вывод отсортированного массива на экран:
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
 	
+
 	int sum = 0;
 
 	for (int i = 0; i < ROWS; i++)
@@ -65,6 +122,7 @@ void main()
 		}
 	}
 	cout << "Максимальное значение двумерного массива: " << max << endl;
+
 }
 
 /*
