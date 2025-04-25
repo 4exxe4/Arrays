@@ -23,13 +23,13 @@ void main()
 
 	for (int i = 0; i < number_of_shifts; i++)
 	{
-		int buffer_right = arr[n - 1]; 
+		int buffer_right = arr[n - 1]; // Сохраняем последний элемент
 
 		for (int j = n - 1; j > 0; j--)
 		{
-			arr[j] = arr[j - 1]; 
+			arr[j] = arr[j - 1]; // Сдвигаем элементы вправо
 		}
-		arr[0] = buffer_right; 
+		arr[0] = buffer_right; // Перемещаем сохраненный элемент на первое место
 
 		// Вывод сдвинутого массива
 		for (int i = 0; i < n; i++)
